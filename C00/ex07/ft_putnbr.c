@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb_main.c                               :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:47:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/03 20:28:07 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/03 23:34:11 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/03 23:35:40 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,40 +17,26 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_numbers(char a, char b, char c)
+void	ft_putnbr(int nb)
 {
-	ft_putchar(a);
-	ft_putchar(b);
-	ft_putchar(c);
-	ft_putchar(',');
-	ft_putchar(' ');
-}
-
-void	ft_print_comb(void)
-{
-	char	a;
-	char	b;
-	char	c;
-
-	a = '0';
-	while (a <= '7')
+	if (nb == -2147483648)
 	{
-		b = a + 1;
-		while (b <= '8')
-		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				ft_print_numbers(a, b, c);
-				c++;
-			}
-			b++;
-		}
-		a++;
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
 	}
-}
-
-int	main(void)
-{
-	ft_print_comb();
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		nb = nb % 10;
+		ft_putchar(48 + nb);
+	}
+	else
+		ft_putchar(48 + nb);
 }

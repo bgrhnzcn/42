@@ -1,56 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb_main.c                               :+:      :+:    :+:   */
+/*   ft_putnbr_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:47:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/03 20:28:07 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/03 15:09:41 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/03 23:37:39 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_putnbr.c"
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void	ft_print_numbers(char a, char b, char c)
-{
-	ft_putchar(a);
-	ft_putchar(b);
-	ft_putchar(c);
-	ft_putchar(',');
-	ft_putchar(' ');
-}
-
-void	ft_print_comb(void)
-{
-	char	a;
-	char	b;
-	char	c;
-
-	a = '0';
-	while (a <= '7')
-	{
-		b = a + 1;
-		while (b <= '8')
-		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				ft_print_numbers(a, b, c);
-				c++;
-			}
-			b++;
-		}
-		a++;
-	}
-}
+void	ft_putnbr(int nb);
 
 int	main(void)
 {
-	ft_print_comb();
+	ft_putnbr(2147483647);
+	ft_putchar('\n');
+	ft_putnbr(-2147483648);
+	ft_putchar('\n');
+	ft_putnbr(0);
+	ft_putchar('\n');
 }
