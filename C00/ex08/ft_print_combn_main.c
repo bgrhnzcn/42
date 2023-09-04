@@ -6,7 +6,7 @@
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 01:25:42 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/04 01:27:15 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/04 14:15:40 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int main(void)
 {
-    ft_print_combn(5);
+    ft_print_combn(4);
 }
