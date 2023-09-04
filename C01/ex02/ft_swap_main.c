@@ -1,51 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_swap_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:47:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/03 15:10:22 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 20:45:20 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 20:49:08 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_swap.c"
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void    ft_swap(int *a, int *b);
 
-void	ft_print_numbers(char a, char b, char c)
+int main(void)
 {
-	ft_putchar(a);
-	ft_putchar(b);
-	ft_putchar(c);
-	ft_putchar(',');
-	ft_putchar(' ');
-}
+    int a;
+    int b;
 
-void	ft_print_comb(void)
-{
-	char	a;
-	char	b;
-	char	c;
-
-	a = '0';
-	while (a <= '7')
-	{
-		b = a + 1;
-		while (b <= '8')
-		{
-			c = b + 1;
-			while (c <= '9')
-			{
-				ft_print_numbers(a, b, c);
-				c++;
-			}
-			b++;
-		}
-		a++;
-	}
+    a = 77;
+    b = 67;
+    write(1, &a, 1);
+    write(1, &b, 1);
+    ft_swap(&a, &b);
+    write(1, &a, 1);
+    write(1, &b, 1);
 }

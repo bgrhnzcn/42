@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 18:44:36 by buozcan           #+#    #+#             */
-/*   Updated: 2023/08/31 19:04:10 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 21:04:40 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 21:43:53 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putstr(char *str)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 122)
+	while (*str != 0)
 	{
-		write (1, &c, 1);
-		c++;
+		write(1, str, 1);
+		str++;
 	}
 }

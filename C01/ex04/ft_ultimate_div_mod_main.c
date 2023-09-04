@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod_main.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:19:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/08/31 19:23:35 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 21:01:11 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 21:03:11 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_ultimate_div_mod.c"
+#include <stdio.h>
 
-void	ft_print_numbers(void)
+int main(void)
 {
-	char	c;
+    int a;
+    int b;
 
-	c = '0';
-	while (c <= 57)
-	{
-		write (1, &c, 1);
-		c++;
-	}
+    a = 10;
+    b = 3;
+    ft_ultimate_div_mod(&a, &b);
+    printf("Div: %d", a);
+    printf("Mod: %d", b);
 }

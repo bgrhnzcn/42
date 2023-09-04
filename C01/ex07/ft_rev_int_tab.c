@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers_main.c                            :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:19:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/04 17:34:33 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 21:49:39 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 21:49:39 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int	temp;
 
-	c = '0';
-	while (c <= 57)
-	{
-		write (1, &c, 1);
-		c++;
-	}
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-int	main(void)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	ft_print_numbers();
+	int	upper_limit;
+	int	lower_limit;
+
+	lower_limit = 0;
+	upper_limit = size - 1;
+	while (upper_limit >= lower_limit)
+	{
+		ft_swap((tab + lower_limit), tab)
+	}
 }

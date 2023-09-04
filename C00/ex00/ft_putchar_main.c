@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 18:16:06 by buozcan           #+#    #+#             */
-/*   Updated: 2023/08/31 18:42:24 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/04 20:33:07 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ void	ft_putchar(char c)
 int	main(void)
 {
 	ft_putchar('h');
+	write(1,'a',1);
 }

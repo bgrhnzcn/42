@@ -5,7 +5,7 @@
 		}
 	],
     "settings": {
-        "editor.detectIndentation": false
+        "editor.detectIndentation": true
         ,"editor.indentSize": "tabSize"
         ,"editor.tabSize": 4
         ,"editor.acceptSuggestionOnEnter": "off"

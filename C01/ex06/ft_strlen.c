@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers_main.c                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:19:25 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/04 17:34:33 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 21:44:36 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 21:46:44 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_numbers(void)
+int	ft_strlen(char *str)
 {
-	char	c;
+	int	i;
 
-	c = '0';
-	while (c <= 57)
+	i = 0;
+	while (*str != 0)
 	{
-		write (1, &c, 1);
-		c++;
+		i++;
+		str++;
 	}
-}
-
-int	main(void)
-{
-	ft_print_numbers();
+	return (i);
 }

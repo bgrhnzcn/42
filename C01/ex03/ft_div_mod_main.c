@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_div_mod_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/31 19:24:35 by buozcan           #+#    #+#             */
-/*   Updated: 2023/08/31 19:45:01 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 20:53:28 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/04 20:58:10 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_div_mod.c"
+#include <stdio.h>
 
-void	ft_is_negative(int n)
+int main(void)
 {
-	char	p;
-	char	c;
+    int a;
+    int b;
+    int div;
+    int mod;
 
-	p = 'P';
-	c = 'N';
-	if (n < 0)
-	{
-		write(1, &c, 1);
-	}
-	else
-	{
-		write(1, &p, 1);
-	}
+    a = 10;
+    b = 3;
+    ft_div_mod(a, b, &div, &mod);
+    printf("Div: %d\n", div);
+    printf("Mod: %d\n", mod);
 }
