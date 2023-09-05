@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab_main.c                              :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 19:20:19 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/05 19:25:54 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/08/31 19:19:25 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/05 18:38:32 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_rev_int_tab.c"
+#include <unistd.h>
 
-int main(void)
+void	ft_print_numbers(void)
 {
-    int arr[7] = {1,2,3,4,5,6,7};
-    ft_rev_int_tab(arr, 7);
-    int i = 0;
-    while (i < 7)
-    {
-        printf("%d\n", arr[i]);
-        i++;
-    }
+	char	c;
+
+	c = '0';
+	while (c <= 57)
+	{
+		write (1, &c, 1);
+		c++;
+	}
 }

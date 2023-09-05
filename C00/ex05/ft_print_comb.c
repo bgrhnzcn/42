@@ -1,35 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 21:49:39 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/05 19:28:28 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/08/31 19:47:25 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/05 18:40:07 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int	temp;
+#include <unistd.h>
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }
 
-void	ft_rev_int_tab(int *tab, int size)
+void	ft_print_numbers(char a, char b, char c)
 {
-	int	upper_limit;
-	int	lower_limit;
+	ft_putchar(a);
+	ft_putchar(b);
+	ft_putchar(c);
+	ft_putchar(',');
+	ft_putchar(' ');
+}
 
-	lower_limit = 0;
-	upper_limit = size - 1;
-	while (upper_limit >= lower_limit)
+void	ft_print_comb(void)
+{
+	char	a;
+	char	b;
+	char	c;
+
+	a = '0';
+	while (a <= '7')
 	{
-		ft_swap((tab + lower_limit), tab + upper_limit);
-		upper_limit--;
-		lower_limit++;
+		b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				ft_print_numbers(a, b, c);
+				c++;
+			}
+			b++;
+		}
+		a++;
 	}
 }
