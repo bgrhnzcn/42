@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab_main.c                              :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 19:20:19 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/05 19:25:54 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/08/31 18:16:06 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/05 18:35:15 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_rev_int_tab.c"
+#include <unistd.h>
 
-int main(void)
+void	ft_putchar(char c)
 {
-    int arr[7] = {1,2,3,4,5,6,7};
-    ft_rev_int_tab(arr, 7);
-    int i = 0;
-    while (i < 7)
-    {
-        printf("%d\n", arr[i]);
-        i++;
-    }
+	write(1, &c, 1);
 }

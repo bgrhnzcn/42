@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab_main.c                              :+:      :+:    :+:   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 19:20:19 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/05 19:25:54 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/08/31 19:08:11 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/05 18:37:53 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_rev_int_tab.c"
+#include <unistd.h>
 
-int main(void)
+void	ft_print_reverse_alphabet(void)
 {
-    int arr[7] = {1,2,3,4,5,6,7};
-    ft_rev_int_tab(arr, 7);
-    int i = 0;
-    while (i < 7)
-    {
-        printf("%d\n", arr[i]);
-        i++;
-    }
+	char	c;
+
+	c = 'z';
+	while (c >= 97)
+	{
+		write (1, &c, 1);
+		c--;
+	}
 }
