@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:41:52 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/06 15:57:20 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/06 18:42:52 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@ char	*ft_strcpy(char *dest, char *src)
 	int	i;
 
 	i = 0;
-	while (src[i] !=  0)
+	while (src[i] != 0)
 	{
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i + 1] = 0;
 	return (dest);
 }

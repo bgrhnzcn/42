@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 21:44:36 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/04 21:46:44 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/06 20:31:19 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@ int	ft_strlen(char *str)
 	int	i;
 
 	i = 0;
-	while (*str != 0)
+	while (str[i] != 0)
 	{
 		i++;
-		str++;
 	}
 	return (i);
 }

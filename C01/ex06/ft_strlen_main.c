@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 21:46:49 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/04 21:48:28 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/06 20:31:13 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main(void)
 {
-    char str[] = "metin";
+    char str[] = "meti asdn";
 
     printf("Lenght: %d", ft_strlen(str));
 }
