@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:10:23 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/07 18:06:47 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/07 18:40:18 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_char_is_lower(char c)
 {
-	unsigned	i;
+	if (c <= 'z' && c >= 'a')
+		return (1);
+	return (0);
+}
+
+char	*ft_strupcase(char *str)
+{
+	int	i;
 
 	i = 0;
-	while (i < n && src[i] != 0)
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (ft_char_is_lower(str[i]))
+			str[i] -= 32;
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+	return (str);
 }

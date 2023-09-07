@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strcapitalize_main.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:10:23 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/07 20:17:44 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/07 20:22:55 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned	i;
+#include "ft_strcapitalize.h"
+#include <stdio.h>
 
-	i = 0;
-	while (i < n && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+int main()
+{
+    char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+
+    ft_strcapitalize(str);
+
+    printf("%s", str);
 }

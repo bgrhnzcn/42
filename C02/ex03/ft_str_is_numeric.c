@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:10:23 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/07 17:42:03 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/07 17:44:20 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_char_is_num(char c)
 {
-	unsigned	i;
+	if ((c <= '9' && c >= '0'))
+		return (1);
+	return (0);
+}
+
+int	ft_str_is_numeric(char *str)
+{
+	int	i;
 
 	i = 0;
-	while (i < n && src[i] != 0)
+	while (str[i])
 	{
-		dest[i] = src[i];
+		if (!ft_char_is_num(str[i]))
+			return (0);
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+	return (1);
 }

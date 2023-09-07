@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric_main.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:10:23 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/07 17:44:22 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/07 17:46:36 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned	i;
+#include "ft_str_is_numeric.c"
+#include <stdio.h>
 
-	i = 0;
-	while (i < n && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+int	ft_str_is_numeric(char *str);
+
+int main()
+{
+    char str[] = "me123t neme.";
+    char str1[] = "4523";
+    char str2[] = "";
+
+    printf("%d\n" ,ft_str_is_numeric(str));
+    printf("%d\n" ,ft_str_is_numeric(str1));
+    printf("%d\n" ,ft_str_is_numeric(str2));
 }

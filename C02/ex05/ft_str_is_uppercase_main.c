@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_uppercase_main.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:10:23 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/07 17:52:36 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/07 17:55:01 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned	i;
+#include "ft_str_is_uppercase.c"
+#include <stdio.h>
 
-	i = 0;
-	while (i < n && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
+int	ft_str_is_uppercase(char *str);
+
+int main()
+{
+    char str[] = "me123t Meme.";
+    char str1[] = "METIN";
+    char str2[] = "";
+
+    printf("%d\n" ,ft_str_is_uppercase(str));
+    printf("%d\n" ,ft_str_is_uppercase(str1));
+    printf("%d\n" ,ft_str_is_uppercase(str2));
 }

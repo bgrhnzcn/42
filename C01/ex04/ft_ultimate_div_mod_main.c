@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 21:01:11 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/04 21:03:11 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/07 17:32:04 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(void)
     int b;
 
     a = 10;
-    b = 3;
+    b = 0;
     ft_ultimate_div_mod(&a, &b);
     printf("Div: %d", a);
     printf("Mod: %d", b);
