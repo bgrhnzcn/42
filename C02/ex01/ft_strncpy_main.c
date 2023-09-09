@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 18:05:11 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 16:11:47 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/09 16:28:59 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
-#include "ft_strncpy.c"
-
-char    *ft_strncpy(char *dest, char *src, unsigned int n);
+#include "ft_strncpy.h"
 
 int main()
 {

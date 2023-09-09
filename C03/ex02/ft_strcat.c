@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase_main.c                                :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 18:12:47 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 17:21:57 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/09 19:32:38 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/09 19:32:40 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strupcase.h"
-#include <stdio.h>
-
-int main()
+char	*ft_strcat(char *dest, char *src)
 {
-    char str[] = "me123t Meme.";
-    char str1[] = "METIN";
-    char str2[] = "";
+	int	i;
+	int	j;
 
-    ft_strupcase(str);
-    printf("%s\n" ,str);
-
-    ft_strupcase(str1);
-    printf("%s\n" ,str1);
-    
-    ft_strupcase(str2);
-    printf("%s\n" ,str2);
+	i = 0;
+	while (dest[i])
+		i++;
+	j = 0;
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = 0;
+	return (dest);
 }

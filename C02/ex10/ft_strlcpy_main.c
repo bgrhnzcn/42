@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase_main.c                                :+:      :+:    :+:   */
+/*   ft_strlcpy_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 18:12:47 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 17:21:57 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/09 14:10:08 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/09 17:23:57 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strupcase.h"
 #include <stdio.h>
+#include <string.h>
+#include "ft_strlcpy.h"
 
 int main()
 {
-    char str[] = "me123t Meme.";
-    char str1[] = "METIN";
-    char str2[] = "";
+    char src[] = "dneme metini";
+    char dest[15];
+    unsigned int    x = ft_strlcpy(dest, src, (unsigned int)5);
 
-    ft_strupcase(str);
-    printf("%s\n" ,str);
-
-    ft_strupcase(str1);
-    printf("%s\n" ,str1);
-    
-    ft_strupcase(str2);
-    printf("%s\n" ,str2);
+    printf("%d\n", x);
+    printf("%s\n", dest);
 }

@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase_main.c                                :+:      :+:    :+:   */
+/*   ft_strcmp_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 18:12:47 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 17:21:57 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/09 17:26:36 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/09 17:59:24 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strupcase.h"
 #include <stdio.h>
+#include "ft_strcmp.h"
 
-int main()
+int	main(void)
 {
-    char str[] = "me123t Meme.";
-    char str1[] = "METIN";
-    char str2[] = "";
-
-    ft_strupcase(str);
-    printf("%s\n" ,str);
-
-    ft_strupcase(str1);
-    printf("%s\n" ,str1);
-    
-    ft_strupcase(str2);
-    printf("%s\n" ,str2);
+	char str1[] = "deneme metini";
+	char str2[] = "deneme";
+	int x = ft_strcmp(str1, str2);
+	printf("%d\n", x);
 }

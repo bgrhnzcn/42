@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase_main.c                                :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 18:12:47 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 17:21:57 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/09 16:46:02 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/09 16:54:45 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strupcase.h"
-#include <stdio.h>
-
-int main()
+int	ft_strlen(char *str)
 {
-    char str[] = "me123t Meme.";
-    char str1[] = "METIN";
-    char str2[] = "";
+	int i;
 
-    ft_strupcase(str);
-    printf("%s\n" ,str);
+	i = 0;
+	while (str[i] != 0)
+	{
+		i++;
+	}
+	return (i);
+}
 
-    ft_strupcase(str1);
-    printf("%s\n" ,str1);
-    
-    ft_strupcase(str2);
-    printf("%s\n" ,str2);
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+{
+	unsigned int i;
+
+	if (size == 0)
+	{
+		return (ft_strlen(src));
+	}
+	i = 0;
+	while (src[i] != 0 && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = 0;
+	return (ft_strlen(src));
 }
