@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 18:22:46 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 21:37:42 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/10 19:36:45 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/10 19:37:33 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
+#include <unistd.h>
 
-	i = 0;
-	while (i < (int)n)
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		if (s1[i] < s2[i])
-			return (s1[i] - s2[i]);
-		if (s1[i] > s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
 	}
-	return (0);
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		nb = nb % 10;
+		ft_putchar(48 + nb);
+	}
+	else
+		ft_putchar(48 + nb);
 }

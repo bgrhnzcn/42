@@ -1,27 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 18:22:46 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 21:37:42 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/10 19:38:39 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/10 19:38:58 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
+#include "ft_atoi.c"
 
-	i = 0;
-	while (i < (int)n)
-	{
-		if (s1[i] < s2[i])
-			return (s1[i] - s2[i]);
-		if (s1[i] > s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
-}
+int ft_atoi(char *str);

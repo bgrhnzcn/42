@@ -3,28 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:32:38 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/09 19:32:40 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/10 21:49:44 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
-	int	i;
 	int	j;
 
-	i = 0;
-	while (dest[i])
-		i++;
+	while (*dest)
+		dest++;
 	j = 0;
 	while (src[j])
 	{
-		dest[i] = src[j];
-		i++;
+		*dest = src[j];
+		dest++;
 		j++;
 	}
-	dest[i] = 0;
+	*dest = 0;
 	return (dest);
 }

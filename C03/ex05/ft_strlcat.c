@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 20:52:58 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 02:15:02 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/10 19:37:38 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,20 @@ int	ft_strlen(char *str)
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	int	i;
-	int	j;
-	int	dest_size;
-	int src_size;
+	int	dest_len;
+	int src_len;
 
-	src_size = ft_strlen(src);
+	src_len = ft_strlen(src);
 	if (!size)
-		return (src_size);
-	dest_size = ft_strlen(dest); 
-	dest += dest_size - 1;
+		return (src_len);
+	dest_len = ft_strlen(dest); 
+	dest += dest_len;
 	i = 0;
-	while (i < size - dest_size -1)
+	while (i < (int)size - dest_len - 1)
 	{
-		*dest = src[i];
+		dest[i] = src[i];
 		i++;
-		j++;
 	}
-	dest[i] = 0;
-	return (dest);
+	dest[i + 1] = 0;
+	return (dest_len + src_len);
 }

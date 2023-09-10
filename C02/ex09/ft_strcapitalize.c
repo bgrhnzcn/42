@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:02:29 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 14:03:59 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/10 21:07:36 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_is_alphanumeric(char c)
 		return (1);
 	if (c <= 'Z' && c >= 'A')
 		return (1);
-	if (c <= '0' && c >= '9')
+	if (c <= '9' && c >= '0')
 		return (1);
 	return (0);
 }
@@ -30,7 +30,7 @@ char	*ft_strcapitalize(char *str)
 	i = 1;
 	while (str[i])
 	{
-		if (ft_is_alphanumeric(str[i - 1]) || (str[i] <= '0' && str[i] >= '9'))
+		if (ft_is_alphanumeric(str[i - 1]) || (str[i] <= '9' && str[i] >= '0'))
 		{
 			i++;
 			continue ;
