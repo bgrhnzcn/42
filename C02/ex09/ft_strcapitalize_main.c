@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 20:17:44 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 20:22:55 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/11 21:20:54 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    char str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+    char str[] = "salut, Comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 
     ft_strcapitalize(str);
 

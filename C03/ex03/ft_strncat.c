@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:33:05 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/09 19:38:52 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/11 20:15:53 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	while (dest[i])
 		i++;
 	j = 0;
-	while (j < (int)nb)
+	while (j < (int)nb && !src[i])
 	{
 		dest[i] = src[j];
 		i++;

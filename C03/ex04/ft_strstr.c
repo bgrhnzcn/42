@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:49:07 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/09 20:40:04 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/11 20:21:28 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ char	*ft_strstr(char *str, char *to_find)
 	int	i;
 
 	i = 0;
+	if (!*to_find)
+		return (str);
 	while (*str)
 	{
 		if (*str == to_find[i])
@@ -33,5 +35,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		str++;
 	}
-	return NULL;
+	return (0);
 }

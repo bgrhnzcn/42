@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 16:46:02 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/09 16:54:45 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/11 17:33:04 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != 0)
@@ -24,12 +24,8 @@ int	ft_strlen(char *str)
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int i;
+	unsigned int	i;
 
-	if (size == 0)
-	{
-		return (ft_strlen(src));
-	}
 	i = 0;
 	while (src[i] != 0 && i < size - 1)
 	{

@@ -1,29 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_base.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 17:57:37 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/11 16:31:34 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/11 22:44:53 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/11 22:58:41 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
-{
-	unsigned int	i;
+#include "ft_putnbr_base.c"
 
-	i = 0;
-	while (i < n && src[i] != 0)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = 0;
-		i++;
-	}
-	return (dest);
-}
+void	ft_putnbr_base(int nbr, char *base);

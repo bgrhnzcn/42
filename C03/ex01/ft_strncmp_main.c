@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:21:58 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 21:38:14 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/11 20:07:55 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int main()
 {
-    char str1[] = "dememe ";
-    char str2[] = "dememe metini";
+    char str1[] = "dememe metasd";
+    char str2[] = "dem2me metini";
     int x = ft_strncmp(str1, str2, 10);
     int y = strncmp(str1, str2, 10);
     printf("%d\n", x);

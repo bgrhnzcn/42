@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 18:05:11 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/09 16:28:59 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:34:50 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,21 @@ int main()
     for(int i = 0; i < 11; i++)
     {
         printf("%d", dest[i]);
+        
     }
+    printf("\n%s\n", dest);
+
     for(int i = 0; i < 50; i++)
     {
         printf("%d", dest2[i]);
+        
     }
+    printf("\n%s\n", dest2);
+
     for(int i = 0; i < 16; i++)
     {
         printf("%d", dest3[i]);
+        
     }
-    //printf("%s\n", dest);
+    printf("\n%s\n", dest3);
 }

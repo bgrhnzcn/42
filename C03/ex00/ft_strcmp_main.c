@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 17:26:36 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 21:32:49 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/11 16:53:32 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	main(void)
 {
-	char str1[] = "deneme metini";
+	char str1[] = "deneme atini";
 	char str2[] = "deneme metini";
 	int x = ft_strcmp(str1, str2);
 	int y = strcmp(str1, str2);

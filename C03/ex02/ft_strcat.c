@@ -6,23 +6,25 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:32:38 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/10 21:49:44 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/11 17:09:44 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
+	int	i;
 	int	j;
 
-	while (*dest)
-		dest++;
+	i = 0;
+	while (dest[i])
+		i++;
 	j = 0;
 	while (src[j])
 	{
-		*dest = src[j];
-		dest++;
+		dest[i] = src[j];
+		i++;
 		j++;
 	}
-	*dest = 0;
+	dest[i] = 0;
 	return (dest);
 }
