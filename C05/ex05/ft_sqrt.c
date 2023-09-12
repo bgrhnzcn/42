@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr_main.c                                   :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 19:48:29 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/11 23:45:42 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/12 05:00:05 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/12 05:22:14 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include "ft_strstr.h"
-
-int main()
+int	ft_sqrt(int nb)
 {
-    char str[] = "deneme metini";
-    char to_find[] = "met";
-    char *result = ft_strstr(str, to_find);
-    char *result2 = strstr(str, to_find);
-    printf("%s\n", result);
-    printf("%s\n", result2);
+	int	i;
+
+	if (nb < 0)
+		return (0);
+	i = 1;
+	while (i <= nb)
+	{
+		if (nb / i == i)
+			return (i);
+		i++;
+	}
+	return (0);
 }

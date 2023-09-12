@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 19:33:05 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/11 20:15:53 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/12 02:25:39 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/12 07:22:14 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	while (dest[i])
 		i++;
 	j = 0;
-	while (j < (int)nb && !src[i])
+	while (j < nb && src[j])
 	{
 		dest[i] = src[j];
 		i++;

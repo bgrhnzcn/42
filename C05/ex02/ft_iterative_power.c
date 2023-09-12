@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr_main.c                                   :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 19:48:29 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/11 23:45:42 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/12 00:21:27 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/12 01:07:34 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include "ft_strstr.h"
-
-int main()
+int	ft_iterative_power(int nb, int power)
 {
-    char str[] = "deneme metini";
-    char to_find[] = "met";
-    char *result = ft_strstr(str, to_find);
-    char *result2 = strstr(str, to_find);
-    printf("%s\n", result);
-    printf("%s\n", result2);
+	int	result;
+
+	if (nb == 0 && power == 0)
+		return (1);
+	if (power < 0)
+		return (0);
+	result = 1;
+	while (power)
+	{
+		result *= nb;
+		power--;
+	}
+	return (result);
 }

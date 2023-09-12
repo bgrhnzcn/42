@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr_main.c                                   :+:      :+:    :+:   */
+/*   ft_is_prime_main.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 19:48:29 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/11 23:45:42 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/12 05:24:50 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/12 05:34:15 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
-#include "ft_strstr.h"
+#include "ft_is_prime.h"
 
-int main()
+int	main(void)
 {
-    char str[] = "deneme metini";
-    char to_find[] = "met";
-    char *result = ft_strstr(str, to_find);
-    char *result2 = strstr(str, to_find);
-    printf("%s\n", result);
-    printf("%s\n", result2);
+	int	x;
+
+	x = ft_is_prime(11);
+	printf("%d\n", x);
 }
