@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:21:47 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/13 15:09:48 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/13 18:33:27 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/13 18:44:29 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+#include <stdlib.h>
+
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
-	unsigned int	j;
+	int	i;
 
 	i = 0;
-	while (dest[i])
+	while (str[i])
 		i++;
-	j = 0;
-	while (j < nb && src[j])
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+{
+	int		i;
+	char	*p;
+
+	i = 0;
+	p = malloc((ft_strlen(src) + 1) * sizeof(char));
+	if (p != NULL)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		while (src[i])
+		{
+			p[i] = src[i];
+			i++;
+		}
+		p[i] = 0;
 	}
-	dest[i] = 0;
-	return (dest);
+	return (p);
 }

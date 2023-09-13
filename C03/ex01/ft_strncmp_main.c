@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:21:58 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/12 19:34:09 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/13 14:47:15 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 int main()
 {
-    char str1[] = "asd\200";
-    char str2[] = "asd";
-    int x = ft_strncmp(str1, str2, 4);
-    int y = strncmp(str1, str2, 4);
+    char str1[4];
+    char str2[4];
+    int x = ft_strncmp(str1, str2, 1500);
+    int y = strncmp(str1, str2, 1500);
     printf("%d\n", x);
     printf("%d\n", y);
 }

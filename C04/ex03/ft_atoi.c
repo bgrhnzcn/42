@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:39:31 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/11 23:54:09 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/13 16:16:49 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ int	ft_atoi(char *str)
 		}
 		i++;
 	}
-	return (0);
+	return (result * sign);
 }

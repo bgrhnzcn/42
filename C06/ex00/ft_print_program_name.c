@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:21:47 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/13 15:09:48 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/13 16:34:14 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/13 17:01:38 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	i;
-	unsigned int	j;
+#include <unistd.h>
 
+int	main(int argc, char **argv)
+{
+	int		i;
+	char	*str;
+
+	if (!argc)
+		return (0);
+	str = *argv;
 	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (j < nb && src[j])
+	while (str[i])
 	{
-		dest[i] = src[j];
+		write(1, &str[i], 1);
 		i++;
-		j++;
 	}
-	dest[i] = 0;
-	return (dest);
+	write(1, "\n", 1);
+	return (0);
 }

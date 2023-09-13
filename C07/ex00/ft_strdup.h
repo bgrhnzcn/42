@@ -1,30 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:21:47 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/13 15:09:48 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/13 18:32:10 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/13 18:32:42 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	i;
-	unsigned int	j;
+#include "ft_strdup.c"
 
-	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (j < nb && src[j])
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = 0;
-	return (dest);
-}
+char	*ft_strdup(char *src);

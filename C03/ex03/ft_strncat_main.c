@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncat_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 19:32:24 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/12 20:24:00 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:09:55 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 int main()
 {
-    int a = 5;
-    char dest[4] = "";
-    char dest2[4] = "";
+    int a = -4;
     char src[] = "123456";
+    char dest[4] = "";
     printf("%s\n", ft_strncat(dest,src, a));
+    char dest2[4] = "";
     printf("%s\n", strncat(dest2,src, a));
 }

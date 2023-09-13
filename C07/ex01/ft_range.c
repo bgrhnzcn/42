@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:21:47 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/13 15:09:48 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/13 18:45:55 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/13 19:16:19 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	i;
-	unsigned int	j;
+#include <stdlib.h>
 
-	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (j < nb && src[j])
+int	*ft_range(int min, int max)
+{
+	int	*p;
+	int	i;
+
+	if (min >= max)
+		return (0);
+	p = malloc((max - min) * sizeof(int));
+	if (p != 0)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		i = 0;
+		while (i < (max - min))
+		{
+			p[i] = min + i;
+			i++;
+		}
 	}
-	dest[i] = 0;
-	return (dest);
+	return (p);
 }

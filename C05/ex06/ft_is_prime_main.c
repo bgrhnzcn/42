@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 05:24:50 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/12 05:34:15 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/13 16:05:46 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ int	main(void)
 {
 	int	x;
 
-	x = ft_is_prime(11);
+	x = ft_is_prime(25);
 	printf("%d\n", x);
 }

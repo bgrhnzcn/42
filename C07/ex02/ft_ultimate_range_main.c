@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_range_main.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 20:21:47 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/13 15:09:48 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/13 19:03:51 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/13 20:24:29 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	i;
-	unsigned int	j;
+#include "ft_ultimate_range.h"
+#include <stdlib.h>
+#include <stdio.h>
 
+int	main(void)
+{
+	int *range;
+	int size;
+	int i;
+
+	size = ft_ultimate_range(&range, 20, 58);
+	printf("%d\n", size);
 	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (j < nb && src[j])
+	while (i <= size)
 	{
-		dest[i] = src[j];
+		printf("%d\n", range[size - i]);
 		i++;
-		j++;
 	}
-	dest[i] = 0;
-	return (dest);
+	return (0);
 }
