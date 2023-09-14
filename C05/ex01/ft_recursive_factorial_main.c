@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 00:15:02 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/12 00:19:13 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/14 17:14:40 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	int	x = ft_recursive_factorial(5);
+	int	x = ft_recursive_factorial(3);
 	printf("%d\n", x);
 }

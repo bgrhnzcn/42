@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 05:00:05 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/12 05:22:14 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/14 17:52:30 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_sqrt(int nb)
 	i = 1;
 	while (i <= nb)
 	{
-		if (nb / i == i)
+		if (nb == i * i)
 			return (i);
 		i++;
 	}

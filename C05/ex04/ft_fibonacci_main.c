@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 01:00:36 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/12 01:07:13 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/14 17:44:25 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 
 int	main(void)
 {
-	int x = ft_fibonacci(10);
+	int x = ft_fibonacci(3);
 	printf("%d\n", x);
 }

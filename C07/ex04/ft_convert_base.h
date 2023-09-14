@@ -1,21 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power_main.c                          :+:      :+:    :+:   */
+/*   ft_convert_base.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 00:20:43 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/14 17:22:35 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/14 19:49:39 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/14 19:50:37 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_iterative_power.h"
-#include <stdio.h>
+#include "ft_convert_base.c"
 
-int	main(void)
-{
-	int x = ft_iterative_power(-2, 3);
-
-    printf("%d\n", x);
-}
+char	*ft_convert_base(char *nbr, char *base_from, char *base_to);

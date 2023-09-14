@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 05:36:39 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/13 16:09:08 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/14 17:56:57 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
+	if (nb < 2)
+		nb = 2;
 	while (nb)
 	{
 		if (ft_is_prime(nb))
