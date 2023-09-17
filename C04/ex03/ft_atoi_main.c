@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_main.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:39:01 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/13 16:23:24 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/17 17:51:33 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "ft_atoi.h"
 
 int	main(void)
 {
-	printf("%d\n", ft_atoi("-0012736.3839a42\0"));
+	printf("%d\n", ft_atoi("         -++-28 -.a839a42\0"));
+    printf("%d\n", atoi("        -27 - a36.a839a42\0"));
 }

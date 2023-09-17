@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_atoi_base_main.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 00:21:27 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/17 18:04:36 by bgrhnzcn         ###   ########.fr       */
+/*   Created: 2023/09/17 17:38:39 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/17 19:40:12 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
-{
-	int	result;
+#include "ft_atoi_base.h"
+#include <stdio.h>
 
-	if (nb == 0 && power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	result = 1;
-	while (power)
-	{
-		result *= nb;
-		power--;
-	}
-	return (result);
+int	main(void)
+{
+	printf("%d\n", ft_atoi_base("   ---++- 29", "0123456789"));
 }
