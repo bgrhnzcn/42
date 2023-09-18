@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:44:56 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 12:18:50 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/18 19:48:59 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	ft_is_base_correct(char *base)
 	return (1);
 }
 
-int	ft_str_base(int nbr, int digit, char *result, char *base)
+int	ft_str_base(int nbr, char *result, char *base)
 {
 	int	base_size;
 	int	i;
@@ -81,7 +81,6 @@ int	ft_str_base(int nbr, int digit, char *result, char *base)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	char	result[32];
-	int		i;
 	int		digit;
 	char	ascii;
 	int		new_digit;
@@ -99,10 +98,10 @@ void	ft_putnbr_base(int nbr, char *base)
 		nbr = -nbr;
 	}
 	digit = ft_digit(nbr);
-	new_digit = ft_str_base(nbr, digit, result, base);
+	new_digit = ft_str_base(nbr, result, base);
 	while (new_digit--)
 	{
-		ascii = base[result[32 - new_digit - 1]];
+		ascii = base[(unsigned char)result[32 - new_digit - 1]];
 		write(1, &ascii, 1);
 	}
 }

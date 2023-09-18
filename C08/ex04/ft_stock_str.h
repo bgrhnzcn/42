@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs_main.c                                      :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:31:00 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 15:52:12 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 16:37:22 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/18 17:02:29 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
-
-int	main(void)
+typedef struct s_stock_str
 {
-	int	a;
-
-	a = 5;
-	printf("%d\n", ABS(a));
-}
+	int		size;
+	char	*str;
+	char	*copy;
+}	t_stock_str;

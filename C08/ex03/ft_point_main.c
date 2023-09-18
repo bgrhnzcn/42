@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs_main.c                                      :+:      :+:    :+:   */
+/*   ft_point_main.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:31:00 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 15:52:12 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 15:57:29 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/18 16:30:15 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
+#include "ft_point.h"
 
-int	main(void)
+void set_point(t_point *point)
 {
-	int	a;
-
-	a = 5;
-	printf("%d\n", ABS(a));
+	point->x = 42;
+	point->y = 21;
+}
+int main(void)
+{
+	t_point point;
+	set_point(&point);
+	return (0);
 }

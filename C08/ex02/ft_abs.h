@@ -6,8 +6,8 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:26:01 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 13:34:15 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/18 15:54:22 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define ABS(a) (a < 0) return (-a) else return (a))
+#define ABS(x) (((x < 0) * (-1) + (x > 0)) * x)

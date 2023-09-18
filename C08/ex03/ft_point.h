@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs_main.c                                      :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:31:00 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 15:52:12 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 15:57:46 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/18 16:30:14 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_abs.h"
-#include <stdio.h>
-
-int	main(void)
+typedef struct t_point
 {
-	int	a;
-
-	a = 5;
-	printf("%d\n", ABS(a));
-}
+	int	x;
+	int	y;
+}t_point;

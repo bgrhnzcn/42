@@ -6,16 +6,16 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:03:52 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/14 18:08:38 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/18 17:33:39 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int ft_ultimate_range(int **range, int min, int max)
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int i;
-	int *temp;
+	int	i;
+	int	*temp;
 
 	if (min >= max)
 	{

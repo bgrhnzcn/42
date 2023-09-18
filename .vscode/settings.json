@@ -27,5 +27,8 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "files.associations": {
+    "ft_stock_str.h": "c"
+  }
 }
