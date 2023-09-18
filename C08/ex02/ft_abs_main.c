@@ -1,15 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.h                                   :+:      :+:    :+:   */
+/*   ft_abs_main.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 22:44:53 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 11:05:34 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 13:31:00 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/18 13:33:46 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_putnbr_base.c"
+#include "ft_abs.h"
+#include <stdio.h>
 
-void	ft_putnbr_base(int nbr, char *base);
+int	main(void)
+{
+	int	a;
+
+	a = -5;
+	printf("%d\n", ABS(a));
+}

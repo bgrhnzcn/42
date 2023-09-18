@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base_main.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:38:39 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/17 19:40:12 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/18 09:29:43 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 int	main(void)
 {
-	printf("%d\n", ft_atoi_base("   ---++- 29", "0123456789"));
+	printf("%d\n", ft_atoi_base("   ---++- 79806ABFa22", "0123456789ABCDEF"));
 }

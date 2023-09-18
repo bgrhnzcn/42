@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:38:36 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/09/17 19:40:11 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/09/18 09:29:12 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,6 @@ int	ft_search_char(char c, char *base)
 	return (0);
 }
 
-int	ft_digit(char *str, char *base)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		if (!ft_search_char(str[i], base))
-			break ;
-		i++;
-	}
-	return (i);
-}
-
 int	ft_is_ignored(char c)
 {
 	if (c <= 13 && c >= 9)
@@ -49,16 +35,28 @@ int	ft_is_ignored(char c)
 	return (0);
 }
 
-int	ft_check_num_base(char *str, char *base, int base_value)
+int	ft_ascii_to_int(char c, char *base)
+{
+	int	i;
+
+	i = 0;
+	while (base[i])
+	{
+		if (base[i] == c)
+			return (i);
+		i++;
+	}
+	return (0);
+}
+
+int	ft_check_num_base(char *str, char *base, int base_value, int size)
 {
 	int	result;
 	int	value;
 	int	digit;
-	int	size;
 	int	power;
 
 	result = 0;
-	size = ft_digit(str, base);
 	digit = 0;
 	while (digit != size)
 	{
@@ -69,16 +67,17 @@ int	ft_check_num_base(char *str, char *base, int base_value)
 			value *= base_value;
 			power--;
 		}
-		result += value * (str[size - digit - 1] - 48);
+		result += value * ft_ascii_to_int(str[size - digit - 1], base);
 		digit++;
 	}
 	return (result);
 }
 
-int	ft_atoi_base(char *str,char *base)
+int	ft_atoi_base(char *str, char *base)
 {
 	int	sign;
 	int	base_value;
+	int	size;
 
 	base_value = 0;
 	while (base[base_value] != 0)
@@ -91,7 +90,13 @@ int	ft_atoi_base(char *str,char *base)
 		else if (!(ft_is_ignored(*str) || ft_search_char(*str, base)))
 			return (0);
 		if (ft_search_char(*str, base))
-			return (sign * ft_check_num_base(str, base, base_value));
+		{
+			size = 0;
+			while (str[size++])
+				if (!ft_search_char(str[size], base))
+					break ;
+			return (sign * ft_check_num_base(str, base, base_value, size));
+		}
 		str++;
 	}
 	return (0);
