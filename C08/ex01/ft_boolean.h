@@ -6,9 +6,12 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:17:52 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 18:54:20 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/19 20:24:38 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FT_BOOLEAN
+#define FT_BOOLEAN
 
 #include <unistd.h>
 
@@ -20,3 +23,4 @@
 #define SUCCESS 0
 
 typedef int	t_bool;
+#endif

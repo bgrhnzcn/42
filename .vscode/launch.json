@@ -12,6 +12,19 @@
       "program": "/Users/buozcan/Documents/42/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb"
+    },
+    {
+      "name": "C/C++: gcc etkin dosyayı derle ve dosyada hata ayıkla",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: gcc build active file"
     }
   ]
 }

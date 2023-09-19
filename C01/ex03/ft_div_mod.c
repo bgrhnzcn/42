@@ -6,12 +6,12 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 20:51:30 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/07 17:38:48 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/19 20:07:53 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-		*div = a / b;
-		*mod = a % b;
+	*div = a / b;
+	*mod = a % b;
 }

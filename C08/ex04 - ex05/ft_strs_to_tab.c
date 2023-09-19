@@ -6,13 +6,14 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:37:24 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 18:51:54 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/19 19:59:46 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
+#include <stdlib.h>
 
-int	ft_strlen(char *str)
+int	ft_strlenght(char *str)
 {
 	int	i;
 
@@ -28,7 +29,7 @@ char	*ft_strdup(char *src)
 	char	*p;
 
 	i = 0;
-	p = malloc((ft_strlen(src) + 1) * sizeof(char));
+	p = malloc((ft_strlenght(src) + 1) * sizeof(char));
 	if (p != 0)
 	{
 		while (src[i])
@@ -46,13 +47,13 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	int					i;
 	struct s_stock_str	*storage;
 
-	storage = malloc(ac * sizeof (struct s_stock_str));
+	storage = (struct s_stock_str *)malloc((ac + 1) * sizeof (struct s_stock_str));
 	if (!storage)
 		return (0);
 	i = 0;
 	while (i < ac)
 	{
-		storage[i].size = ft_strlen(av[i]);
+		storage[i].size = ft_strlenght(av[i]);
 		storage[i].str = av[i];
 		storage[i].copy = ft_strdup(av[i]);
 		i++;

@@ -6,11 +6,37 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:19:36 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/14 19:25:39 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/19 17:54:45 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+int	ft_total_size(char **str, int size)
+{
+	int	i;
+	int	total;
+
+	i = 0;
+	total = 0;
+	while (i < size)
+	{
+		total += ft_strlen(str[i]);
+		i++;
+	}
+	return (total);
+}
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
@@ -21,9 +47,9 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	i = 0;
 	k = 0;
-	if (!size)
-		return ((char *)malloc(0));
-	res = malloc(sizeof(strs));
+	if (size <= 0)
+		return (malloc(0));
+	res = malloc((ft_total_size(strs, size) + (ft_strlen(sep) * size)));
 	while (i < size)
 	{
 		j = 0;
@@ -36,5 +62,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 			res[k++] = sep[j++];
 		i++;
 	}
+	res[k] = 0;
 	return (res);
 }

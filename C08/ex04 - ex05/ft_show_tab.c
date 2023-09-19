@@ -6,27 +6,28 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:00:44 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 18:38:51 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/19 20:04:07 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "ft_stock_str.h"
+#include <unistd.h>
+#include <stdio.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-int	ft_strlen(char *str)
+void	ft_putstr(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (*str != 0)
+	{
+		write(1, str, 1);
+		str++;
+	}
 }
+
 
 void	ft_putnbr(int nb)
 {
@@ -59,13 +60,14 @@ void	ft_show_tab(struct s_stock_str *par)
 	if (par == 0)
 		return ;
 	i = 0;
-	while (par[i].str == 0)
+	while (par[i].str)
 	{
-		write(1, par[i].str, ft_strlen(par[i].str));
-		write(1, "\n", 1);
+		ft_putstr(par[i].str);
+		ft_putchar('\n');
 		ft_putnbr(par[i].size);
-		write(1, "\n", 1);
-		write(1, par[i].copy, ft_strlen(par[i].copy));
-		write(1, "\n", 1);
+		ft_putchar('\n');
+		ft_putstr(par[i].copy);
+		ft_putchar('\n');
+		i++;
 	}
 }
