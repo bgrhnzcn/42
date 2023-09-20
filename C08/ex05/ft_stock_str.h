@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean_main.c                                  :+:      :+:    :+:   */
+/*   ft_stock_str.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:18:18 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/20 16:47:40 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 16:37:22 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/20 16:53:44 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_boolean.h"
+#ifndef FT_STOCK_STR_H
 
-void	ft_putstr(char *str)
-{
-	while (*str)
-		write(1, str++, 1);
-}
+# define FT_STOCK_STR_H
 
-t_bool	ft_is_even(int nbr)
+typedef struct s_stock_str
 {
-	return ((EVEN(nbr)) ? TRUE : FALSE);
-}
+	int		size;
+	char	*str;
+	char	*copy;
+}	t_stock_str;
 
-int	main(int argc, char **argv)
-{
-	(void)argv;
-	if (ft_is_even(argc - 1) == TRUE)
-		ft_putstr(EVEN_MSG);
-	else
-		ft_putstr(ODD_MSG);
-	return (SUCCESS);
-}
+#endif

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean_main.c                                  :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:18:18 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/20 16:47:40 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/09 17:27:57 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/09/10 21:38:21 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_boolean.h"
-
-void	ft_putstr(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
-	while (*str)
-		write(1, str++, 1);
-}
+	int	i;
 
-t_bool	ft_is_even(int nbr)
-{
-	return ((EVEN(nbr)) ? TRUE : FALSE);
-}
-
-int	main(int argc, char **argv)
-{
-	(void)argv;
-	if (ft_is_even(argc - 1) == TRUE)
-		ft_putstr(EVEN_MSG);
-	else
-		ft_putstr(ODD_MSG);
-	return (SUCCESS);
+	i = 0;
+	while (1)
+	{
+		if (s1[i] < s2[i])
+			return (s1[i] - s2[i]);
+		if (s1[i] > s2[i])
+			return (s1[i] - s2[i]);
+		if (s1[i] == s2[i] && !s1[i])
+			break ;
+		i++;
+	}
+	return (0);
 }

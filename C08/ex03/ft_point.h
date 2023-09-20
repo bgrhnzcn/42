@@ -6,12 +6,17 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:57:46 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/18 16:30:14 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/20 19:15:07 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FT_POINT_H
+
+# define FT_POINT_H
 
 typedef struct t_point
 {
 	int	x;
 	int	y;
 }t_point;
+#endif

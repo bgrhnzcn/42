@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:26:01 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/20 16:48:46 by buozcan          ###   ########.fr       */
+/*   Created: 2023/08/31 18:16:06 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/05 18:35:15 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
+#include <unistd.h>
 
-# define FT_ABS_H
-
-# define ABS(x) (((x < 0) * (-1) + (x > 0)) * x)
-
-#endif
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

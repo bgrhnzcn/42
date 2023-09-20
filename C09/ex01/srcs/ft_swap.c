@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:26:01 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/20 16:48:46 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/04 20:43:59 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/06 01:27:30 by bgrhnzcn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
+void	ft_swap(int *a, int *b)
+{
+	int	temp;
 
-# define FT_ABS_H
-
-# define ABS(x) (((x < 0) * (-1) + (x > 0)) * x)
-
-#endif
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}

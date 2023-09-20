@@ -6,13 +6,12 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:00:44 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/19 20:04:07 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/20 16:51:30 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
@@ -27,7 +26,6 @@ void	ft_putstr(char *str)
 		str++;
 	}
 }
-
 
 void	ft_putnbr(int nb)
 {

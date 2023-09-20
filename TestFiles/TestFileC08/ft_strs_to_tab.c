@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:37:24 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/19 19:59:46 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/20 17:50:55 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	int					i;
 	struct s_stock_str	*storage;
 
-	storage = (struct s_stock_str *)malloc((ac + 1) * sizeof (struct s_stock_str));
+	storage = malloc((ac + 1) * sizeof (struct s_stock_str));
 	if (!storage)
 		return (0);
 	i = 0;
