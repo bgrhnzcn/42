@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:00:44 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/20 16:51:30 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/09/21 21:08:47 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_putnbr(int nb)
 		ft_putchar(48 + nb);
 }
 
-void	ft_show_tab(struct s_stock_str *par)
+void	ft_show_tab(t_stock_str *par)
 {
 	int	i;
 

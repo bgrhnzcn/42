@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 13:17:52 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/21 20:45:52 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/18 13:16:26 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/20 16:45:02 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BOOLEAN_H
+#ifndef FT_H
 
-# define FT_BOOLEAN_H
+# define FT_H
 
-# include <unistd.h>
-
-# define TRUE 1
-
-# define FALSE 0
-
-# define EVEN(a) (a % 2 == 0)
-
-# define EVEN_MSG "I have an even number of arguments.\n"
-
-# define ODD_MSG "I have an odd number of arguments.\n"
-
-# define SUCCESS 0
-
-typedef int	t_bool;
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 #endif

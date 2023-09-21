@@ -1,27 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/09 18:22:46 by buozcan           #+#    #+#             */
-/*   Updated: 2023/09/21 16:50:05 by buozcan          ###   ########.fr       */
+/*   Created: 2023/09/21 19:36:50 by buozcan           #+#    #+#             */
+/*   Updated: 2023/09/21 21:19:32 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+#include <stdlib.h>
+
+typedef struct t_word
 {
-	unsigned int	i;
+	char	*first;
+	int		lenght;
+}t_word;
+
+int	ft_strlen(char *str)
+{
+	int	i;
 
 	i = 0;
-	while (i < n)
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*ft_create_substr(char *start, int lenght)
+{
+	char	*res;
+	int		i;
+
+	res = malloc(lenght + 1);
+	if (!res)
+		return (0);
+	i = 0;
+	while (start[i])
 	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - s2[i]);
-		if (s1[i] == 0 || s2[i] == 0)
-			break ;
+		res[i] = start[i];
 		i++;
 	}
-	return (0);
+}
+
+char	**ft_split(char *str, char *charset)
+{
+	char	**strs;
+	int		i;
 }
