@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 17:18:32 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/09 19:02:19 by buozcan          ###   ########.fr       */
+/*   Created: 2023/10/11 15:10:33 by buozcan           #+#    #+#             */
+/*   Updated: 2023/10/11 15:10:33 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+static void	*ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (src < dst)
+	while (i < n)
 	{
-		while (i < len)
-		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
-		}
+		((char *)s)[i] = 0;
+		i++;
 	}
-	else
-	{
-		while (len >= 0)
-		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+	return (s);
+}
+
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*res;
+	size_t	buffsize;
+
+	buffsize = nmemb * size;
+	res = malloc(buffsize);
+	if (res == NULL)
+		return (res);
+	ft_bzero(res, buffsize);
+	return (res);
 }

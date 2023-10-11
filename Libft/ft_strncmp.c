@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 17:18:32 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/09 19:02:19 by buozcan          ###   ########.fr       */
+/*   Created: 2023/10/11 14:40:56 by buozcan           #+#    #+#             */
+/*   Updated: 2023/10/11 14:40:56 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (src < dst)
+	while (i < n)
 	{
-		while (i < len)
-		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
-		}
+		if (s1[i] > s2[i])
+			return (1);
+		if (s1[i] < s2[i])
+			return (-1);
+		if (s1[i] == 0 || s2[i] == 0)
+			break ;
+		i++;
 	}
-	else
-	{
-		while (len >= 0)
-		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+	return (0);
 }

@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 17:18:32 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/09 19:02:19 by buozcan          ###   ########.fr       */
+/*   Created: 2023/10/11 14:55:49 by buozcan           #+#    #+#             */
+/*   Updated: 2023/10/11 14:55:49 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
+	char	*str;
 
+	str = (char *)s;
 	i = 0;
-	if (src < dst)
+	while (i < n)
 	{
-		while (i < len)
+		if (str[i] == c)
 		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
+			return (&str[i]);
 		}
+		i++;
 	}
-	else
-	{
-		while (len >= 0)
-		{
-			((char *)dst)[len - 1] = ((char *)src)[len - 1];
-			len--;
-		}
-	}
-	return (dst);
+	return (NULL);
 }
