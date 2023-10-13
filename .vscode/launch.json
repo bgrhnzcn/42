@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/daka_/OneDrive/Documents/Code/C/42/Libft",
-      "program": "c:/Users/daka_/OneDrive/Documents/Code/C/42/Libft/build/Debug/outDebug",
+      "cwd": "c:/Users/daka_/OneDrive/Documents/Code/C/42/Libft/fd",
+      "program": "c:/Users/daka_/OneDrive/Documents/Code/C/42/Libft/fd/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
