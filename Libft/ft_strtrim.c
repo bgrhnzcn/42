@@ -14,7 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*res;
-
-	res = 
+	const char	*p;
+	p = s1;
+	p = set;
+	p++;
+	return (NULL);
 }

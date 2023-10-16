@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-static void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
-
 void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb == -2147483648)

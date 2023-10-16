@@ -12,18 +12,6 @@
 
 #include "libft.h"
 
-static size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		i++;
-	}
-	return (i);
-}
-
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -43,13 +31,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	dst[i] = 0;
 	return (dst_len + src_len);
-}
-
-int main()
-{
-	char src[] = "deneme metini";
-	char dst[20] = "test";
-
-	printf("%i\n", ft_strlcat(dst, src, 20));
-	printf("%s\n", dst);
 }
