@@ -6,19 +6,12 @@
       "type": "cppdbg",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
+      "stopAtEntry": true,
       "externalConsole": false,
-      "cwd": "/home/bgrhnzcn/Documents/42/Libft",
-      "program": "/home/bgrhnzcn/Documents/42/Libft/build/Debug/outDebug",
+      "cwd": "/Users/buozcan/Documents/42",
+      "program": "/Users/buozcan/Documents/42/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "miDebuggerPath": "gdb"
     },
     {
       "name": "C/C++: gcc etkin dosyayı derle ve dosyada hata ayıkla",

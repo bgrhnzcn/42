@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:49:31 by bgrhnzcn          #+#    #+#             */
-/*   Updated: 2023/10/16 18:55:33 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:46:15 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	int		count;
 
 	count = ft_count_words(s, c);
-	res = (char **)malloc(sizeof (char *) * (count + 1));
+	res = malloc(sizeof(char *) * (count + 1));
 	if (res == NULL)
 		return (NULL);
 	i = 0;
@@ -73,8 +73,11 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			s++;
 		if (*s != 0)
+		{
 			if (ft_checknull(s, res, c, i))
 				return (NULL);
+			i++;
+		}
 		while (*s && *s != c)
 			s++;
 	}

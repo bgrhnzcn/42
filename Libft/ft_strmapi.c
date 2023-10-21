@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 15:29:41 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/17 13:48:36 by bgrhnzcn         ###   ########.fr       */
+/*   Updated: 2023/10/21 18:21:30 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		res[index] = f(index, s[index]);
 		index++;
 	}
+	res[index] = 0;
 	return (res);
 }
