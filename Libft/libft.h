@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bgrhnzcn <bgrhnzcn@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/17 20:20:27 by bgrhnzcn          #+#    #+#             */
+/*   Updated: 2023/10/17 20:29:54 by bgrhnzcn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
- #define LIBFT_H
- #include <stdlib.h>
- #include <string.h>
- #include <stdio.h>
- #include <unistd.h>
+# define LIBFT_H
+# include <stdlib.h>
+# include <string.h>
+# include <stdio.h>
+# include <unistd.h>
+
 typedef struct s_list
 {
 	void			*content;
@@ -40,9 +53,9 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-char    *strnstr(const char *big, const char *little, size_t len);
-int 	atoi(const char *nptr);
-char    **ft_split(char const *s, char c);
+char	*strnstr(const char *big, const char *little, size_t len);
+int		atoi(const char *nptr);
+char	**ft_split(char const *s, char c);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
