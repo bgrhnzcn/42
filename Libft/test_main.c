@@ -6,11 +6,12 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 15:19:57 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/21 20:36:41 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/10/23 20:26:41 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	mapi(unsigned int i, char c)
 {
@@ -59,6 +60,7 @@ static int	ft_wordlenght(const char *str, char c)
 
 int main()
 {
+	printf("%s\n", ft_strjoin("", "sss"));
 
 	printf("%d\n", ft_wordlenght("  deneme  ", ' '));
 
@@ -92,8 +94,8 @@ int main()
 	//Memset_Test
 	//int a[] = {0,56,42};
 	//ft_memset((((void *)a) + 3), 255, 1);
-	//ft_memset(((void *)a), 6, 1);
-	//ft_memset((((void *)a) + 1), 255, 1);
+	//ft_memset(((void *)a), 156, 1);
+	//ft_memset((((void *)a) + 1), 254, 1);
 	//ft_memset((((void *)a) + 2), 255, 1);
 	//printf("%i\n", a[0]);
 }
