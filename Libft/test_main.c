@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 15:19:57 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/23 20:26:41 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:33:28 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,13 @@ static int	ft_wordlenght(const char *str, char c)
 
 int main()
 {
-	printf("%s\n", ft_strjoin("", "sss"));
-
-	printf("%d\n", ft_wordlenght("  deneme  ", ' '));
-
-	printf("%d\n", ft_atoi("-25729"));
-
-	printf("%s\n", ft_itoa(101));
+	//printf("%s\n", ft_strjoin("", "sss"));
+//
+	//printf("%d\n", ft_wordlenght("  deneme  ", ' '));
+//
+	//printf("%d\n", ft_atoi("-25729"));
+//
+	//printf("%s\n", ft_itoa(101));
 	//char *str = "LoReM iPsUm";
 	//char *res = ft_strmapi(str, &mapi);
 	//printf("%s\n", res);
