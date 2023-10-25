@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 20:41:51 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/24 16:45:29 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/10/25 18:28:26 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*res;
 	size_t			total;
-	unsigned char	i;
-	unsigned char	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	total = ft_strlen(s1) + ft_strlen(s2);
 	res = malloc(sizeof(char) * (total + 1));
