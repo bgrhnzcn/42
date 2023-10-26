@@ -21,6 +21,9 @@ NAME = libft.a
 
 all: $(NAME)
 
+%.o: %.c
+	$(CC) $(FLAGS) -c $?
+
 $(NAME): ${OBJECTS} 
 	ar -rcs $(NAME) $(OBJECTS)
 
