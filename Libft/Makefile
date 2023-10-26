@@ -13,16 +13,13 @@ OBJECTS = $(SRCS:.c=.o)
 
 BONUS_OBJECTS = $(BONUS_SRCS:.c=.o)
 
-COMPILER = gcc
+CC = gcc
 
 FLAGS = -Wall -Werror -Wextra
 
 NAME = libft.a
 
 all: $(NAME)
-
-%.o: %.c
-	$(COMPILER) $(FLAGS) -I./ -c $?
 
 $(NAME): ${OBJECTS} 
 	ar -rcs $(NAME) $(OBJECTS)

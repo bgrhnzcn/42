@@ -6,7 +6,7 @@
 /*   By: buozcan <buozcan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 15:19:57 by buozcan           #+#    #+#             */
-/*   Updated: 2023/10/24 17:33:28 by buozcan          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:21:24 by buozcan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,11 +92,11 @@ int main()
 
 
 	//Memset_Test
-	//int a[] = {0,56,42};
-	//ft_memset((((void *)a) + 3), 255, 1);
-	//ft_memset(((void *)a), 156, 1);
-	//ft_memset((((void *)a) + 1), 254, 1);
-	//ft_memset((((void *)a) + 2), 255, 1);
-	//printf("%i\n", a[0]);
+	int a[] = {0,56,42};
+	ft_memset((((void *)a) + 3), 255, 1);
+	ft_memset(((void *)a), 0, 1);
+	ft_memset((((void *)a) + 1), 255, 1);
+	ft_memset((((void *)a) + 2), 255, 1);
+	printf("%i\n", a[0]);
 }
 
